@@ -9,7 +9,7 @@ class UserController extends Controller
 {
     public function index()
     {
-    	$users = User::with('articles')->paginate(10);
+    	$users = User::orderBy('created_at', 'desc')->get();
 
     	return response()->json($users, 200);
     }
@@ -36,9 +36,9 @@ class UserController extends Controller
 
     public function update(Request $request, $id)
     {
-        if ($request->password) {
+        if ($pass = $request->password && $pass != '') {
             $request->merge([
-                'password' => app('hash')->make($request->password),
+                'password' => app('hash')->make($pass),
             ]);
         } else {
             unset($request['password']);

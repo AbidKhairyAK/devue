@@ -67,7 +67,8 @@ return [
      * You can read more on 'simple' headers at http://www.w3.org/TR/cors/#simple-header
      */
     S::KEY_ALLOWED_HEADERS => [
-        'content-type'             => null,
+        'accept'                   => true,
+        'content-type'             => true,
         'x-custom-request-header'  => null,
         // Enabling all headers might be insecure. Not recommended to use in production.
         S::VALUE_ALLOW_ALL_HEADERS => null,

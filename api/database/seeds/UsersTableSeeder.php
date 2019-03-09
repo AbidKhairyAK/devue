@@ -18,6 +18,7 @@ class UsersTableSeeder extends Seeder
         	$data[$i] = [
                 'name' => $faker->name,
                 'email' => $faker->freeEmail,
+                'role' => $faker->randomElement(['super admin', 'admin', 'author', 'editor']),
                 'password' => app('hash')->make('asdqwe123'),
                 'created_at' => date('Y-m-d', time()),
                 'updated_at' => date('Y-m-d', time()),
