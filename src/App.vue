@@ -45,6 +45,6 @@
   }
   .fade-enter, .fade-leave-to {
     opacity: 0;
-    transform: rotateX(90deg);
+    transform: translateY(10%);
   }
 </style>
