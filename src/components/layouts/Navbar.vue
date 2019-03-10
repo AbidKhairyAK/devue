@@ -9,7 +9,7 @@
 		</v-btn>
 
 		<v-btn icon>
-			<v-icon>search</v-icon>
+			<v-icon>account_circle</v-icon>
 		</v-btn>
 
 	</v-toolbar>
