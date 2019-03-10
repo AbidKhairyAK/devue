@@ -18,6 +18,17 @@ $router->get('/', 'Controller@app');
 
 $router->group(['prefix' => 'api'], function() use ($router) {
 
+	$router->get('/', function() {
+		return '
+			<h4>Daftar API Devue</h4>
+			<ul>
+				<li><a href="/api/articles">article list</a></li>
+				<li><a href="/api/categories">category list</a></li>
+				<li><a href="/api/users">user list</a></li>
+			</ul>
+		';
+	});
+
 	$router->group(['prefix' => 'articles'], function() use ($router) {
 		$router->get('/', 'ArticleController@index');
 		$router->post('/create', 'ArticleController@create');
