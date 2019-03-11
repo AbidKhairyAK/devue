@@ -18,5 +18,6 @@ Vue.filter('lower_case', function (value) {
 Vue.prototype.$qs = qs;
 Vue.prototype.$axios = axios;
 
-// Vue.prototype.$url = 'http://devue.local/api';
-Vue.prototype.$url = '/api';
+Vue.prototype.$url = 'http://devue.local/api';
+// Vue.prototype.$url = 'http://209.97.169.78/api';
+// Vue.prototype.$url = '/api';

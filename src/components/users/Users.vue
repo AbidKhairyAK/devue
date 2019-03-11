@@ -116,7 +116,7 @@
 					}
 				}
 
-				const url_target = this.editState 
+				let url_target = this.editState 
 				? `${this.$url}/users/${id}/update`  
 				: `${this.$url}/users/create`;
 
